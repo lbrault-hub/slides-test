@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        
+        .color-primary { color: #005581; }
+        .bg-primary { background-color: #005581; }
+        .border-primary { border-color: #005581; }
+        
+        .color-secondary { color: #b6aeae; }
+        .bg-secondary { background-color: #b6aeae; }
+        .border-secondary { border-color: #b6aeae; }
+
+        .card-shadow { box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); }
+    </style>
+</head>
+<body class="bg-gray-50 p-6 min-h-screen flex flex-col items-center">
+
+    <!-- Header Slide -->
+    <div class="w-full max-w-6xl bg-secondary bg-opacity-20 py-4 px-8 rounded-xl mb-8 flex justify-between items-center">
+        <h1 class="text-2xl font-bold color-primary tracking-tight">
+            Hypothèse 4 : Investissement de 1 000 000 €
+        </h1>
+        <div class="text-xs font-semibold color-primary opacity-60">PROPOSITION PERSONNALISÉE</div>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 w-full max-w-6xl">
+        
+        <!-- Left Column: Summary & Pie Chart -->
+        <div class="lg:col-span-1 flex flex-col space-y-6">
+            <div class="bg-white p-6 rounded-2xl card-shadow border-l-4 border-primary">
+                <p class="text-lg color-primary font-medium mb-6">Répartition du portefeuille :</p>
+                
+                <!-- Chart Mockup -->
+                <div class="relative w-48 h-48 mx-auto mb-6">
+                    <svg viewBox="0 0 36 36" class="w-full h-full transform -rotate-90">
+                        <circle cx="18" cy="18" r="16" fill="none" class="stroke-current color-secondary" stroke-width="4"></circle>
+                        <circle cx="18" cy="18" r="16" fill="none" class="stroke-current color-primary" stroke-width="4" stroke-dasharray="60, 100"></circle>
+                    </svg>
+                    <div class="absolute inset-0 flex flex-col items-center justify-center">
+                        <span class="text-xs color-primary font-bold">FAS 60%</span>
+                        <span class="text-xs color-secondary font-bold">FID 40%</span>
+                    </div>
+                </div>
+
+                <ul class="space-y-4">
+                    <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                        <span class="text-sm font-semibold color-primary">70% FAS (Utmost)</span>
+                        <span class="text-sm font-bold">700 000 €</span>
+                    </li>
+                    <li class="flex justify-between items-center border-b border-gray-50 pb-2">
+                        <span class="text-sm font-semibold color-secondary">30% FID (Sanso-Longchamp)</span>
+                        <span class="text-sm font-bold">300 000 €</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-primary p-6 rounded-2xl text-white">
+                <p class="text-xs uppercase tracking-widest opacity-80 mb-2">Total Investi</p>
+                <p class="text-4xl font-extrabold">1 000 000 €</p>
+            </div>
+        </div>
+
+        <!-- Right Column: Funds Table -->
+        <div class="lg:col-span-2 bg-white rounded-2xl p-8 card-shadow border-t-8 border-primary">
+            <h2 class="text-xl font-bold color-primary mb-6 flex items-center">
+                <i class="fas fa-list-ul mr-3"></i> Détail de l'Allocation par Fonds
+            </h2>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full text-left">
+                    <thead>
+                        <tr class="bg-primary text-white">
+                            <th class="py-4 px-4 rounded-tl-lg font-semibold">Noms des fonds</th>
+                            <th class="py-4 px-4 text-center font-semibold">Catégorie</th>
+                            <th class="py-4 px-4 text-right rounded-tr-lg font-semibold">Montant (k€)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+                            <td class="py-4 px-4 font-bold color-primary">Rive Tangible Assets</td>
+                            <td class="py-4 px-4 text-center text-gray-500 italic">Actifs Réels</td>
+                            <td class="py-4 px-4 text-right font-bold">200 k€</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+                            <td class="py-4 px-4 font-bold color-primary">Arès</td>
+                            <td class="py-4 px-4 text-center text-gray-500 italic">Dette Privée</td>
+                            <td class="py-4 px-4 text-right font-bold">100 k€</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+                            <td class="py-4 px-4 font-bold color-primary">Horizon Capital</td>
+                            <td class="py-3 px-4 text-center text-gray-500 italic">Trade Finance</td>
+                            <td class="py-4 px-4 text-right font-bold">100 k€</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+                            <td class="py-4 px-4 font-bold color-primary">Sienna ACDL</td>
+                            <td class="py-4 px-4 text-center text-gray-500 italic">Dette Privée</td>
+                            <td class="py-4 px-4 text-right font-bold">100 k€</td>
+                        </tr>
+                        <tr class="border-b border-gray-100 hover:bg-gray-50 transition">
+                            <td class="py-4 px-4 font-bold color-primary">Helium</td>
+                            <td class="py-4 px-4 text-center text-gray-500 italic">Arbitrage</td>
+                            <td class="py-4 px-4 text-right font-bold">100 k€</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="py-4 px-4 font-bold color-primary">Althos API</td>
+                            <td class="py-4 px-4 text-center text-gray-500 italic">Infrastructures</td>
+                            <td class="py-4 px-4 text-right font-bold">100 k€</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Footer Expert Quote -->
+            <div class="mt-8 pt-6 border-t border-gray-100">
+                <div class="bg-gray-50 p-4 rounded-xl border-l-4 border-secondary italic text-xs text-gray-600 leading-relaxed">
+                    Cette répartition vise à optimiser le couple rendement/risque en alliant la performance du Private Equity (via Utmost) et la liquidité d'une stratégie diversifiée (via Sanso-Longchamp).
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Number & Branding -->
+    <div class="w-full max-w-6xl mt-12 flex justify-between items-center opacity-50">
+        <div class="text-sm font-bold color-primary italic">7</div>
+        <div class="flex items-center">
+            <div class="text-right mr-3">
+                <p class="text-[10px] font-bold color-primary uppercase leading-tight">Blanchemain Bourgeois</p>
+                <p class="text-[8px] text-gray-500">Conseil en Gestion de Patrimoine</p>
+            </div>
+            <div class="h-8 w-12 border-2 border-primary rounded flex items-center justify-center font-bold text-xs color-primary">BB</div>
+        </div>
+    </div>
+
+</body>
+</html>
